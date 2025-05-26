@@ -21,17 +21,6 @@ This is a single-player chess web application that helps users **learn and pract
 - ✅ Move validation and board rendering
 - ✅ Clean modular code with API integration
 
----
-
-## 📁 Project Structure
-chess-project/
-|
-├── chess-frontend/ # Angular frontend
-|
-└── chess-backend/ # Spring Boot backend
-
-
----
 
 ## ⚙️ Setup Instructions
 
