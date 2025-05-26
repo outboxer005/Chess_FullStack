@@ -25,10 +25,11 @@ This is a single-player chess web application that helps users **learn and pract
 
 ## 📁 Project Structure
 chess-project/
+|
 ├── chess-frontend/ # Angular frontend
-│ └── ...
+|
 └── chess-backend/ # Spring Boot backend
-└── ...
+
 
 ---
 
