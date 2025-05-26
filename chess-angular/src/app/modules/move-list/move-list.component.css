@@ -1,0 +1,74 @@
+.chess-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.chess-board {
+    
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.move-list-container {
+    position: absolute;
+    bottom: -10px;
+    left: 150px; /* يضمن أنها تكون تحت اللوحة */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.move-navigation {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.move-list {
+    max-height: 100px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 260px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.move-list::-webkit-scrollbar {
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.move-number {
+    width: 30px;
+}
+
+.move {
+    cursor: pointer;
+    width: 100px;
+}
+
+.move:hover {
+    background-color: rgb(0, 143, 168);
+    opacity: 0.7;
+}
+
+.current-move {
+    background-color: rgb(0, 143, 168);
+}

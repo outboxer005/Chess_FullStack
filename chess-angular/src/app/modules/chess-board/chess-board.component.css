@@ -1,0 +1,212 @@
+.chess-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: calc(100vh - 64px);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.chess-board {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #815B5B;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 20px;
+    background: #815B5B;
+    color: white;
+    z-index: 100;
+}
+
+.promotion-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.promotion-dialog img {
+    height: 70px;
+    cursor: pointer;
+}
+
+.close-promotion-dialog {
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+}
+
+.dark {
+    background-color: #594545;
+}
+
+.light {
+    background-color: #FFF8EA;
+}
+
+.piece {
+    width: 60px;
+}
+
+.selected-square {
+    box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px, inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px, inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.safe-square {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.flipBoard {
+    position: relative;
+    --color: #594545;
+    left: 40px;;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.flipBoard:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.flipBoard:hover {
+    color: #fff;
+}
+
+.flipBoard:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.flipBoard:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.flipBoard:active:before {
+    background: #594545;
+    transition: background 0s;
+}
+
+.king-in-check {
+    box-shadow: inset rgb(185, 54, 37) 0px 0px 40px 0px, inset rgb(185, 54, 37) 0px 0px 40px 0px, inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.last-move {
+    box-shadow: inset rgb(52, 196, 47) 0px 0px 40px 0px, inset rgb(52, 196, 47)0px 0px 40px 0px, inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.promotion-square {
+    box-shadow: inset rgb(37, 122, 168) 0px 0px 40px 0px, inset rgb(37, 122, 168) 0px 0px 40px 0px, inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.restartGame {
+    position: relative;
+    --color: #594545;
+    left: 30px;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.restartGame:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.restartGame:hover {
+    color: #fff;
+}
+
+.restartGame:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.restartGame:active:before {
+    background: #594545;
+    transition: background 0s;
+} 

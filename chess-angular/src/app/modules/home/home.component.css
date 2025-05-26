@@ -1,0 +1,365 @@
+.home-container {
+  width: 100%;
+  padding: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(to right, #eecda3, #ef629f);
+  border-radius: 25px;
+  margin: 0 auto 3rem;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  width: 95%;
+  max-width: 1600px;
+  transition: transform 0.3s ease;
+}
+
+.hero-section:hover {
+  transform: translateY(-5px);
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/assets/chess-pattern.png') repeat;
+  opacity: 0.15;
+  z-index: 0;
+  animation: slide 20s linear infinite;
+}
+
+.animate-text {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.features-section {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin: 0 auto 3rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 1600px;
+  width: 95%;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card:hover::before {
+  transform: translateX(100%);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.feature-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #6c757d;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.feature-card:nth-child(1) {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-left: 5px solid #4a90e2;
+}
+
+.feature-card:nth-child(1) .feature-icon,
+.feature-card:nth-child(1):hover h2 {
+  color: #4a90e2;
+}
+
+.feature-card:nth-child(2) {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-left: 5px solid #e24a4a;
+}
+
+.feature-card:nth-child(2) .feature-icon,
+.feature-card:nth-child(2):hover h2 {
+  color: #e24a4a;
+}
+
+.feature-card:nth-child(3) {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-left: 5px solid #67b26f;
+}
+
+.feature-card:nth-child(3) .feature-icon,
+.feature-card:nth-child(3):hover h2 {
+  color: #67b26f;
+}
+
+.rules-section {
+  background: #f8f9fa;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rule-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rule-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.rule-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rule-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.rule-card li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+}
+
+.special-moves {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #e9ecef;
+  border-radius: 8px;
+}
+
+.special-moves h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.about-section {
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.team-info, .tech-stack {
+  margin-top: 2rem;
+}
+
+.team-info ul, .tech-stack ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-info li, .tech-stack li {
+  background: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.piece-section {
+  background: #f8f9fa;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.piece-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.piece-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.piece-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.piece-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.piece-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.piece-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.piece-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.piece-card li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+    width: 98%;
+  }
+  
+  .animate-text {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .features-section {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 2rem;
+  }
+  
+  .feature-card h2 {
+    font-size: 1.6rem;
+  }
+  
+  .feature-card p {
+    font-size: 1.1rem;
+  }
+}

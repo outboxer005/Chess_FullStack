@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+    <!-- Left side - Title -->
+    <div class="title-section">
+        <a routerLink="/" class="title-link">
+            <span class="title">Chess Master</span>
+        </a>
+    </div>
+
+    <!-- Center section - Game options -->
+    <div class="center-section">
+        <div class="game-option-container">
+            <span class="play-text">Play against</span>
+            <button mat-button class="game-option" routerLink="/against-friend">Friends</button>
+            <button mat-button class="game-option" routerLink="/against-computer">Computer</button>
+        </div>
+
+        <button mat-button class="game-option" routerLink="/learn">
+            Learn Chess
+        </button>
+
+        <button mat-button class="game-option" routerLink="/about">
+            About
+        </button>
+    </div>
+
+    <!-- Right section - Login/Profile -->
+    <div class="right-section">
+        <ng-container *ngIf="!isLoggedIn(); else profileSection">
+            <button mat-button class="login-btn" routerLink="/login">
+                Login
+            </button>
+        </ng-container>
+        <ng-template #profileSection>
+            <button mat-button class="profile-btn" routerLink="/profile" matTooltip="Profile">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <button mat-button class="logout-btn" (click)="logout()" matTooltip="Logout">
+                <mat-icon>exit_to_app</mat-icon>
+            </button>
+        </ng-template>
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
