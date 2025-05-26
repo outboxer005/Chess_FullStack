@@ -1,73 +1,55 @@
-#♟ Chess Trainer & Practice Website
-This project is a single-player chess web application where users can learn and practice chess against a chess engine powered by Stockfish. The application is built with an Angular frontend and a Spring Boot backend, with SQL database integration.
+# Chess Trainer & Practice Website ♟️
 
-🔧 Tech Stack
-Frontend: Angular
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Java](https://img.shields.io/badge/backend-Java%20SpringBoot-green.svg) ![Angular](https://img.shields.io/badge/frontend-Angular-red.svg)
 
-Backend: Java Spring Boot
+A single-player chess learning and practice web application powered by **Stockfish**. Built with an **Angular** frontend and a **Java Spring Boot** backend, the platform lets users play against a chess engine, review moves, and improve their skills.
 
-Chess Engine: Stockfish
+---
 
-Database: SQL (MySQL/PostgreSQL or any preferred RDBMS)
+## 🔗 Table of Contents
 
-IDE Support: Visual Studio Code (Frontend), IntelliJ IDEA (Backend)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+  - [Backend (Spring Boot)](#backend-spring-boot)
+  - [Frontend (Angular)](#frontend-angular)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
-🚀 Features
-Play against Stockfish-powered chess engine
+---
 
-Learn and practice with chess modules
+## 🔥 Features
 
-Responsive UI built in Angular
+- Play chess against the **Stockfish** engine
+- Interactive move analysis and hints
+- Practice with custom chess modules
+- Responsive UI built in Angular
+- SQL-based persistence for game history
 
-Easy-to-configure backend with SQL support
+---
 
-📁 Project Structure
-bash
-Copy
-Edit
-chess-project/
-├── chess-frontend/       # Angular frontend
-│   └── ...
-└── chess-backend/        # Spring Boot backend
-    └── ...
-⚙️ Installation & Setup Guide
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone <your-repo-url>
-cd chess-project
-2. Backend Setup (Spring Boot)
-Open the chess-backend folder in IntelliJ IDEA
+## 🛠️ Tech Stack
 
-Configure the application.properties or application.yml file with your SQL database credentials
+- **Frontend**: Angular 15+
+- **Backend**: Java 17, Spring Boot 3
+- **Chess Engine**: Stockfish (v15+)
+- **Database**: MySQL / PostgreSQL
+- **Tooling**:
+  - VS Code (Angular)
+  - IntelliJ IDEA (Spring Boot)
 
-Run the main Spring Boot application class to start the backend server
+---
 
-3. Frontend Setup (Angular)
-Open the chess-frontend folder in Visual Studio Code
+## 📋 Prerequisites
 
-Run the following commands:
-
-bash
-Copy
-Edit
-npm install
-npm install -g @angular/cli
-ng serve
-Navigate to http://localhost:4200 in your browser
-
-🧠 Chess Engine Integration
-The backend uses the Stockfish engine for evaluating moves and responding to the user's input
-
-Ensure Stockfish is properly set up and configured in the backend code
-
-📌 Notes
-Make sure your database is running and accessible
-
-Ensure that CORS is configured if you deploy frontend and backend on different origins
-
-Stockfish engine binary should be available and correctly invoked from backend
-
-📞 Contact
-For any queries or contributions, feel free to open an issue or contact the developer.
+- Node.js v16+ and npm
+- Angular CLI
+- Java JDK 17+
+- Maven or Gradle
+- MySQL or PostgreSQL server
+- Stockfish binary available in system PATH
